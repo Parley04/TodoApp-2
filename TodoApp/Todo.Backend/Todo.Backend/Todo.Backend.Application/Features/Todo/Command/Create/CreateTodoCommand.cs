@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using GenericRepository;
 using MediatR;
+using Todo.Backend.Domain.Dtos;
 using Todo.Backend.Domain.Repositor;
 using TS.Result;
 
@@ -13,7 +14,6 @@ namespace Todo.Backend.Application.Features.Todo.Command.Create
         int BackgroundColor,
         DateTime CreatedDate,
         bool IsCompleted,
-        List<string> Tags,
         bool IsActive = true
         ) : IRequest<Result<string>>;
 

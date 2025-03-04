@@ -30,5 +30,229 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "Create",
+    "RelativePath": "api/Tag/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Tag.Command.Create.CreateTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "Delete",
+    "RelativePath": "api/Tag/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Tag.Command.Delete.DeleteTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "GetById",
+    "RelativePath": "api/Tag/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "GetList",
+    "RelativePath": "api/Tag/GetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "Update",
+    "RelativePath": "api/Tag/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Tag.Command.Update.UpdateTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoController",
+    "Method": "Create",
+    "RelativePath": "api/Todo/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Todo.Command.Create.CreateTodoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoController",
+    "Method": "Delete",
+    "RelativePath": "api/Todo/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Todo.Command.Delete.DeleteTodoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoController",
+    "Method": "GetById",
+    "RelativePath": "api/Todo/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoController",
+    "Method": "GetList",
+    "RelativePath": "api/Todo/GetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoController",
+    "Method": "Update",
+    "RelativePath": "api/Todo/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.Todo.Command.Udate.UpdateTodoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoTagController",
+    "Method": "Create",
+    "RelativePath": "api/TodoTag/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.TodoTag.Command.Create.CreateTodoTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoTagController",
+    "Method": "Delete",
+    "RelativePath": "api/TodoTag/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.TodoTag.Command.Delete.DeleteTodoTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoTagController",
+    "Method": "GetById",
+    "RelativePath": "api/TodoTag/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TodoTagController",
+    "Method": "Update",
+    "RelativePath": "api/TodoTag/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Todo.Backend.Application.Features.TodoTag.Command.Update.UpdateTodoTagCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
