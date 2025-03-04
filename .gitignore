@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TodoApp/Todo.Backend/.vs/Todo.Backend
+/TodoApp/Todo.Backend/Todo.Backend/Todo.Backend.Infrastructure/obj/Debug/net8.0
+/TodoApp/Todo.Backend/Todo.Backend/Todo.Backend.WebAPI/obj/Debug/net8.0
