@@ -350,3 +350,4 @@ C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backen
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.WebAPI\obj\Debug\net8.0\Todo.Backend.WebAPI.pdb
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.WebAPI\obj\Debug\net8.0\Todo.Backend.WebAPI.genruntimeconfig.cache
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.WebAPI\obj\Debug\net8.0\ref\Todo.Backend.WebAPI.dll
+C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.WebAPI\obj\Debug\net8.0\Todo.Backend.WebAPI.sourcelink.json

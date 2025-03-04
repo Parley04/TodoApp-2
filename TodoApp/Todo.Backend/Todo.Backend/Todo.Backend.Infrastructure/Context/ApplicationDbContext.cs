@@ -9,7 +9,13 @@ internal sealed class ApplicationDbContext : IdentityDbContext<AppUser, Identity
 {
     public ApplicationDbContext(DbContextOptions options) : base(options)
     {
+
     }
+    public DbSet<Domain.Entities.Todo> Todos{ get; set; }
+    public DbSet<Tag> Tags{ get; set; }
+    public DbSet<TodoTag> TodoTags{ get; set; }
+
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

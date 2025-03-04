@@ -22,3 +22,4 @@ C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backen
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Domain\obj\Debug\net8.0\refint\Todo.Backend.Domain.dll
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Domain\obj\Debug\net8.0\Todo.Backend.Domain.pdb
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Domain\obj\Debug\net8.0\ref\Todo.Backend.Domain.dll
+C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Domain\obj\Debug\net8.0\Todo.Backend.Domain.sourcelink.json

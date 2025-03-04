@@ -36,3 +36,4 @@ C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backen
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Infrastructure\obj\Debug\net8.0\Todo.Backend.Infrastructure.pdb
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Infrastructure\obj\Debug\net8.0\Todo.Backend.Infrastructure.genruntimeconfig.cache
 C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Infrastructure\obj\Debug\net8.0\ref\Todo.Backend.Infrastructure.dll
+C:\Users\Emre\Desktop\FliingDonkey\TodoApp\Todo.Backend\Todo.Backend\Todo.Backend.Infrastructure\obj\Debug\net8.0\Todo.Backend.Infrastructure.sourcelink.json
