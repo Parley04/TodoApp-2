@@ -9,40 +9,91 @@
             </div>
             <form #todoForm="ngForm">
                 <div class="card-body">
-                    <div class="row mb-2">
-                        <label for="">Checked</label>
-                        <p-toggleButton [(ngModel)]="data.isCompleted" onLabel="Yes" offLabel="No" icon="pi pi-check"
-                            offIcon="pi pi-times" styleClass="p-button-success"></p-toggleButton>
-                    </div>
-
-                    <div class="row mb-2">
-                        <label for="">Title</label>
-                        <input type="text" pInputText name="txtTitle" [(ngModel)]="data.title" #txtTitle="ngModel"
-                            aria-describedby="txtTitle-help" required>
-                        <small *ngIf="txtTitle.invalid && (txtTitle.dirty || txtTitle.touched)" id="txtTitle-help"
-                            class="p-error">Title is required</small>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="">Description</label>
-                        <input type="text" pInputText name="txtDescription" [(ngModel)]="data.description"
-                            #txtDescription="ngModel" aria-describedby="txtDescription-help" required>
-                        <small *ngIf="txtDescription.invalid && (txtDescription.dirty || txtDescription.touched)"
-                            id="txtDescription-help" class="p-error">Description is required</small>
-                    </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="my-2" style="display: flex;justify-content: end;">
-                            <p-button *ngIf="this.id != undefined" [loading]="loading" label="Save" icon="pi pi-save"
-                                styleClass="p-button-success" [disabled]="!todoForm.form.valid"
-                                (click)="save()"></p-button>
-                            <p-button *ngIf="this.id == undefined" [loading]="loading" label="Save" icon="pi pi-save"
-                                styleClass="p-button-success" [disabled]="!todoForm.form.valid"
-                                (click)="save()"></p-button>
+                    <div class="row">
+                        <div class="col-2 mt-3">
+                            <div class="row mb-2">
+                                <label for="isCompleted" class="ml-3">Status</label>
+                                <input type="checkbox" #checkBox="ngModel" [(ngModel)]="data.isCompleted" id="checkBox"
+                                    name="checkBox" [checked]="data.isCompleted" class="custom-checkbox" />
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="row mb-2">
+                                <label for="">Title</label>
+                                <input type="text" pInputText name="txtTitle" [(ngModel)]="data.title"
+                                    #txtTitle="ngModel" aria-describedby="txtTitle-help" required>
+                                <small *ngIf="txtTitle.invalid && (txtTitle.dirty || txtTitle.touched)"
+                                    id="txtTitle-help" class="p-error">Title is required</small>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="row mb-2">
+                                <label for="">Description</label>
+                                <textarea pInputText name="txtDescription" class="longtextarea" [(ngModel)]="data.description"
+                                    #txtDescription="ngModel" aria-describedby="txtDescription-help"
+                                    required></textarea>
+                                <small
+                                    *ngIf="txtDescription.invalid && (txtDescription.dirty || txtDescription.touched)"
+                                    id="txtDescription-help" class="p-error">Description is required</small>
+                            </div>
+                        </div>
+                        <!-- <div class="col-3">
+                            <div *ngFor="let color of colors; let i = index">
+                                <input type="radio" name="color" [value]="color.id" [(ngModel)]="data.backgroundColor"
+                                    (change)="changeBackgroundColor(color)" id="color.id{{i}}">
+                                <label for="color.id{{i}}">{{ color.name }}</label>
+                            </div>
+                        </div> -->
+
+
+                        <div class="col-3">
+                            <label class="mb-2 ">Choose a Color </label>
+
+                            <div *ngFor="let color of colors">
+                                <input type="checkbox" [id]="'color' + color.id" 
+                                       (change)="onColorChange(color)" 
+                                       [checked]="color.selected" 
+                                       class="custom-checkbox" 
+                                       
+                                       [ngClass]="color.selected ? color.class : ''">
+                                <label for="color{{color.id}}">
+                                  {{ color.name | uppercase }}
+                                </label>
+                              </div>
+
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row" >
+                        <label class="mb-2">Tags List: </label>
+
+                        <div class="col-2">
+                            <div class="my-2" style="display: flex;justify-content: start;">
+                                <p-button label="New" icon="pi pi-plus" styleClass="p-button-success"></p-button>
+                            </div>
+                        </div>
+                        <div class="col-10 mt-4" *ngIf="this.id != undefined && data.tags.length > 0">
+                            <span *ngFor="let tag of data.tags">
+                                <span class="pill-success mr-2">{{tag.name}}</span>
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="my-2" style="display: flex;justify-content: end;">
+                        <p-button *ngIf="this.id != undefined" [loading]="loading" label="Save" icon="pi pi-save"
+                            styleClass="p-button-success" [disabled]="!todoForm.form.valid" (click)="save()"></p-button>
+                        <p-button *ngIf="this.id == undefined" [loading]="loading" label="Save" icon="pi pi-save"
+                            styleClass="p-button-success" [disabled]="!todoForm.form.valid" (click)="save()"></p-button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    
-    
+</div>

@@ -4,6 +4,7 @@ import { DecodeService } from '../../service/decode.service';
 import { Todo } from '../model/todo';
 import { MainService } from '../service/main.service';
 import { MessageService } from 'primeng/api';
+import { TodoList } from '../model/todo-list';
 
 @Component({
   selector: 'app-main-form',
@@ -19,16 +20,28 @@ export class MainFormComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
   ) { }
-  data: Todo = new Todo();
+
+  data: TodoList = new TodoList();
   id: number = 0;
   userId: string = "";
   loading: boolean = false;
+  selectedColor: number;
+
+  colors = [
+    { id: 1, name: 'red', selected: false, class: 'red-checkbox' },
+    { id: 2, name: 'yellow', selected: false, class: 'yellow-checkbox' },
+    { id: 3, name: 'blue', selected: false, class: 'blue-checkbox' },
+    { id: 4, name: 'purple', selected: false, class: 'purple-checkbox' },
+    { id: 5, name: 'green', selected: false, class: 'green-checkbox' }
+  ];
+
   @ViewChild('todoForm') form: any;
 
   ngOnInit(): void {
 
     const userIdFromService = this.decodeService.getUserId();
     this.userId = userIdFromService ? userIdFromService.toString() : '';
+    this.data.userId = this.userId;
     this.route.params.subscribe(params => {
       this.id = params["id"];
       this.getTags();
@@ -41,17 +54,21 @@ export class MainFormComponent implements OnInit {
             }, 700);
           } else {
             this.data = res.data;
-            //todo tags listesini burada çağırmam gerkecek.
-            //bir liste olarak gelecek
-            // this.selectedTag = this.cities.find(city => city.id === this.data.cityId);
-            // this.getTowns();
+            this.selectedColor = res.data.backgroundColor;
+            this.updateColorSelection();
+            
           }
         });
+      } else {
+        this.selectedColor = 1;
+        this.updateColorSelection();
       }
     });
   }
-
-  getTags(){
+  updateColorSelection() {
+    this.colors.forEach(c => c.selected = c.id === this.selectedColor);
+  }
+  getTags() {
 
   }
 
@@ -86,4 +103,39 @@ export class MainFormComponent implements OnInit {
       });
     }
   }
+
+  changeBackgroundColor(color: any) {
+    this.data.backgroundColor = color.id;
+  }
+
+  getBackgroundColor(backgroundColor: number): string {
+    switch (backgroundColor) {
+      case 1:
+        return '#ffcccc'; // Red
+      case 2:
+        return '#ffffcc'; // Yellow
+      case 3:
+        return '#cce0ff'; // Blue
+      case 4:
+        return '#e6ccff'; // Purple
+      case 5:
+        return '#ccffcc'; // Green
+      default:
+        return 'transparent';
+    }
+  }
+
+
+ 
+
+  // Her checkbox tıklandığında, sadece bir tanesinin seçili olmasını sağlamak
+  onColorChange(color: any) {
+    // Seçili olan tüm renkleri sıfırlıyoruz
+    this.colors.forEach(c => c.selected = false);
+    // Tıklanan rengi seçili yapıyoruz
+    color.selected = true;
+    this.data.backgroundColor = color.id;
+  }
+
+
 }

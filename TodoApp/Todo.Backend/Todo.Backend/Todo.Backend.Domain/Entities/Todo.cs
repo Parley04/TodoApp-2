@@ -10,8 +10,6 @@ namespace Todo.Backend.Domain.Entities
         public int BackgroundColor { get; set; }
         public bool IsCompleted { get; set; }
 
-
-
         public List<TodoTag> TodoTags { get; set; } = null!;
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;

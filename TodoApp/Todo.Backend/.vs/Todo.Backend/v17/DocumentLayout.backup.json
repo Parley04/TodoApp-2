@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listtodoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listtodoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listofunchosentagsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listofunchosentagsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.domain\\dtos\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|solutionrelative:todo.backend\\todo.backend.domain\\dtos\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5760CDD-0539-4429-8E36-66BFCF3A1C3C}|Todo.Backend\\Todo.Backend.WebAPI\\Todo.Backend.WebAPI.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.webapi\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5760CDD-0539-4429-8E36-66BFCF3A1C3C}|Todo.Backend\\Todo.Backend.WebAPI\\Todo.Backend.WebAPI.csproj|solutionrelative:todo.backend\\todo.backend.webapi\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listtodoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todo\\query\\list\\listtodoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.domain\\dtos\\tagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|solutionrelative:todo.backend\\todo.backend.domain\\dtos\\tagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todotag\\command\\update\\updatetodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todotag\\command\\update\\updatetodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.domain\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|solutionrelative:todo.backend\\todo.backend.domain\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|solutionrelative:todo.backend\\todo.backend.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todotag\\command\\create\\createtodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todotag\\command\\create\\createtodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\tag\\command\\delete\\deletetagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\tag\\command\\delete\\deletetagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\tag\\command\\update\\updatetagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\tag\\command\\update\\updatetagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00B802F0-074C-4905-89E9-9F8B1C1A9A34}|Todo.Backend\\Todo.Backend.Domain\\Todo.Backend.Domain.csproj|solutionrelative:todo.backend\\todo.backend.domain\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|c:\\users\\emre\\desktop\\fliingdonkey\\todoapp\\todo.backend\\todo.backend\\todo.backend.application\\features\\todotag\\command\\delete\\deletetodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5CD42C-E961-4A15-BB21-A02C766E265E}|Todo.Backend\\Todo.Backend.Application\\Todo.Backend.Application.csproj|solutionrelative:todo.backend\\todo.backend.application\\features\\todotag\\command\\delete\\deletetodotagcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,67 +70,147 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TodoDto.cs",
-              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TodoDto.cs",
-              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TodoDto.cs",
-              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TodoDto.cs",
-              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TodoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\Tag.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Entities\\Tag.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\Tag.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Entities\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T12:05:49.778Z",
+              "WhenOpened": "2025-03-05T16:11:52.493Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Todo.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\Todo.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Entities\\Todo.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\Todo.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Entities\\Todo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAArwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:11:53.358Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TagDto.cs",
-              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
-              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
-              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
-              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Title": "TagController.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.WebAPI\\Controllers\\TagController.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.WebAPI\\Controllers\\TagController.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.WebAPI\\Controllers\\TagController.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.WebAPI\\Controllers\\TagController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T12:05:35.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateTodoTagCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Update\\UpdateTodoTagCommand.cs",
-              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Update\\UpdateTodoTagCommand.cs",
-              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Update\\UpdateTodoTagCommand.cs",
-              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Update\\UpdateTodoTagCommand.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T11:29:14.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Entities\\AppUser.cs",
-              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Entities\\AppUser.cs",
-              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Entities\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:42:50.739Z",
+              "WhenOpened": "2025-03-05T17:17:30.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ListOfUnchosenTagsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListOfUnchosenTagsQuery.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListOfUnchosenTagsQuery.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListOfUnchosenTagsQuery.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListOfUnchosenTagsQuery.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAMwCgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T17:06:01.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TagDto.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Domain\\Dtos\\TagDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T17:02:08.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ListTodoQuery.cs",
               "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListTodoQuery.cs",
               "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListTodoQuery.cs",
               "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListTodoQuery.cs",
               "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\Todo\\Query\\List\\ListTodoQuery.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:40:24.036Z",
+              "WhenOpened": "2025-03-05T17:00:54.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:55:56.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateTagCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Update\\UpdateTagCommand.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Update\\UpdateTagCommand.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Update\\UpdateTagCommand.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Update\\UpdateTagCommand.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:48:10.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeleteTagCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Delete\\DeleteTagCommand.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Delete\\DeleteTagCommand.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Delete\\DeleteTagCommand.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\Tag\\Command\\Delete\\DeleteTagCommand.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:48:09.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateTodoTagCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Create\\CreateTodoTagCommand.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Create\\CreateTodoTagCommand.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Create\\CreateTodoTagCommand.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Create\\CreateTodoTagCommand.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:47:50.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeleteTodoTagCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Delete\\DeleteTodoTagCommand.cs",
+              "RelativeDocumentMoniker": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Delete\\DeleteTodoTagCommand.cs",
+              "ToolTip": "C:\\Users\\Emre\\Desktop\\FliingDonkey\\TodoApp\\Todo.Backend\\Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Delete\\DeleteTodoTagCommand.cs",
+              "RelativeToolTip": "Todo.Backend\\Todo.Backend.Application\\Features\\TodoTag\\Command\\Delete\\DeleteTodoTagCommand.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA1wC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:45:15.522Z",
               "EditorCaption": ""
             }
           ]

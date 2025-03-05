@@ -36,8 +36,9 @@ namespace Todo.Backend.Application.Features.Todo.Query.List
                 Tags = todo.TodoTags.Select(tt => new TagDto
                 {
                     Id = tt.Tag!.Id,
-                    Name = tt.Tag.Name
-                }).ToList()
+                    Name = tt.Tag.Name,
+                    CountedUses = tt.Tag.CountedUses
+                }).ToList().OrderByDescending(x => x.CountedUses).ToList()
             }).ToList();
 
             return Result<List<TodoDto>>.Succeed(todoDtos);

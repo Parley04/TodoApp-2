@@ -6555,7 +6555,7 @@ p-password.ng-valid.required .p-password input {
   color: #28c76f;
   padding: .45em .775em;
   // box-shadow: 4px 1px 10px #dee2de;
-  font-size: .65em;
+  font-size: 12px;
   font-weight: 900;
   line-height: 1;
   text-align: center;
@@ -6682,4 +6682,154 @@ p-password.ng-valid.required .p-password input {
   white-space: nowrap;
   vertical-align: baseline;
 
+}.custom-checkbox {
+  margin-left: 30px;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #ccc; /* Gri renk */
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #28a745; /* Yeşil renk */
+  border-color: #28a745;
+}
+
+.custom-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 8px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.active-checkbox {
+  font-weight: bold;
+  color: #28a745;  /* Yeşil renk, seçilen renk için */
+}
+
+.custom-checkbox:focus {
+  outline: none;
+}
+
+
+
+/* Temel checkbox stil */
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; /* Varsayılan sınır rengi */
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Seçilen renkler için stil */
+
+/* Kırmızı */
+.red-checkbox:checked {
+  background-color: #ff4d4d; /* Kırmızı arka plan */
+  border-color: #ff4d4d; /* Kırmızı sınır */
+}
+
+.red-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Tik işareti beyaz */
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+/* Sarı */
+.yellow-checkbox:checked {
+  background-color: #ffeb3b; /* Sarı arka plan */
+  border-color: #ffeb3b; /* Sarı sınır */
+}
+
+.yellow-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Tik işareti beyaz */
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+/* Mavi */
+.blue-checkbox:checked {
+  background-color: #2196f3; /* Mavi arka plan */
+  border-color: #2196f3; /* Mavi sınır */
+}
+
+.blue-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Tik işareti beyaz */
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+/* Mor */
+.purple-checkbox:checked {
+  background-color: #9b59b6; /* Mor arka plan */
+  border-color: #9b59b6; /* Mor sınır */
+}
+
+.purple-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Tik işareti beyaz */
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+/* Yeşil */
+.green-checkbox:checked {
+  background-color: #28a745; /* Yeşil arka plan */
+  border-color: #28a745; /* Yeşil sınır */
+}
+
+.green-checkbox:checked::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Tik işareti beyaz */
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+/* Diğer stil eklemeleri */
+.custom-checkbox:focus {
+  outline: none;
+}
+
+.longtextarea{
+  height: 150px;
 }

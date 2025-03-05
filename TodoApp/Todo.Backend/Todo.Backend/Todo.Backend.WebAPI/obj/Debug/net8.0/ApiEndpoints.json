@@ -97,6 +97,27 @@
   },
   {
     "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
+    "Method": "GetListOfUnchosenTags",
+    "RelativePath": "api/Tag/GetListOfUnchosenTags",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "todoId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Todo.Backend.WebAPI.Controllers.TagController",
     "Method": "Update",
     "RelativePath": "api/Tag/Update",
     "HttpMethod": "POST",

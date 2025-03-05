@@ -1,26 +1,45 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Todo.Backend.Domain.Dtos;
 using Todo.Backend.Domain.Repositor;
 using TS.Result;
 
 namespace Todo.Backend.Application.Features.Todo.Query.GetBy
 {
-    public sealed record GetByIdTodoQuery(Guid Id): IRequest<Result<Domain.Entities.Todo>>;
+    public sealed record GetByIdTodoQuery(Guid Id): IRequest<Result<TodoDto>>;
 
     internal sealed record GetByIdTodoQueryHandler(
-            ITodoRepository todoRepository
-        ) : IRequestHandler<GetByIdTodoQuery, Result<Domain.Entities.Todo>>
+                ITodoRepository todoRepository
+            ) : IRequestHandler<GetByIdTodoQuery, Result<TodoDto>>
     {
-        public async Task<Result<Domain.Entities.Todo>> Handle(GetByIdTodoQuery request, CancellationToken cancellationToken)
+        public async Task<Result<TodoDto>> Handle(GetByIdTodoQuery request, CancellationToken cancellationToken)
         {
-            Domain.Entities.Todo? todo = await todoRepository
-                .Where(x => x.Id == request.Id && x.IsActive == true)
-                .FirstOrDefaultAsync(cancellationToken);
+            var todo = await todoRepository
+               .Where(x => x.Id == request.Id && x.IsActive)
+               .Include(x => x.TodoTags)
+                   .ThenInclude(tt => tt.Tag)
+               .FirstOrDefaultAsync(cancellationToken);
+
             if (todo == null)
             {
-                return Result<Domain.Entities.Todo>.Failure("Todo was not found.");
+                return Result<TodoDto>.Failure("Todo not found.");
             }
-            return todo;
+
+            var todoDto = new TodoDto
+            {
+                Id = todo.Id,
+                Title = todo.Title,
+                Description = todo.Description,
+                BackgroundColor = todo.BackgroundColor,
+                IsCompleted = todo.IsCompleted,
+                Tags = todo.TodoTags.Select(tt => new TagDto
+                {
+                    Id = tt.Tag!.Id,
+                    Name = tt.Tag.Name
+                }).ToList()
+            };
+
+            return Result<TodoDto>.Succeed(todoDto);
         }
-    }   
+    }
 }

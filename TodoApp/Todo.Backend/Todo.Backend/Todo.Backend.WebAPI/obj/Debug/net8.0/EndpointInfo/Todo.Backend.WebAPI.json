@@ -458,6 +458,35 @@
         }
       }
     },
+    "/api/Tag/GetListOfUnchosenTags": {
+      "get": {
+        "tags": [
+          "Tag"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "todoId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tag/GetById": {
       "get": {
         "tags": [
@@ -2550,11 +2579,11 @@
         "properties": {
           "todoId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "tagId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "createdDate": {
             "type": "string",
@@ -2633,6 +2662,10 @@
         "type": "object",
         "properties": {
           "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "tagId": {
             "type": "string",
             "format": "uuid"
           },
