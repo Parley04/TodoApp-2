@@ -66,14 +66,15 @@
                             <td>
                                 {{ data.title.length > 25 ? (data.title | slice:0:25) + '...' : data.title }}
                             </td>
-                            
+
                             <td>
-                                {{ data.description.length > 15 ? (data.description | slice:0:15) + '...' : data.description }}
+                                {{ data.description.length > 15 ? (data.description | slice:0:15) + '...' :
+                                data.description }}
                             </td>
-                            
-                            <td >
+
+                            <td>
                                 <span *ngFor="let tag of data.tags; let i = index">
-                                    <span *ngIf="i < 1" class="mr-1 pill-secondary">{{tag.name}}</span> 
+                                    <span *ngIf="i < 1" class="mr-1 pill-secondary">{{tag.name}}</span>
                                 </span>
                                 <span *ngIf="data.tags.length > 1" class="mr-1 pill-secondary">
                                     +{{data.tags.length - 1}} more
@@ -92,8 +93,11 @@
                             </td>
                         </tr>
                     </ng-template>
+
                 </p-table>
             </div>
+
+
         </div>
     </div>
 </div>

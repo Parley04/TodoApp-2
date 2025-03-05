@@ -10,9 +10,9 @@
             <form #todoForm="ngForm">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-2 mt-3">
+                        <div class="col-2 mt-0">
                             <div class="row mb-2">
-                                <label for="isCompleted" class="ml-3">Status</label>
+                                <label for="isCompleted" class="ml-3 mb-3">Status</label>
                                 <input type="checkbox" #checkBox="ngModel" [(ngModel)]="data.isCompleted" id="checkBox"
                                     name="checkBox" [checked]="data.isCompleted" class="custom-checkbox" />
                             </div>
@@ -32,55 +32,50 @@
                         <div class="col-9">
                             <div class="row mb-2">
                                 <label for="">Description</label>
-                                <textarea pInputText name="txtDescription" class="longtextarea" [(ngModel)]="data.description"
-                                    #txtDescription="ngModel" aria-describedby="txtDescription-help"
-                                    required></textarea>
+                                <textarea pInputText name="txtDescription" class="longtextarea"
+                                    [(ngModel)]="data.description" #txtDescription="ngModel"
+                                    aria-describedby="txtDescription-help" required></textarea>
                                 <small
                                     *ngIf="txtDescription.invalid && (txtDescription.dirty || txtDescription.touched)"
                                     id="txtDescription-help" class="p-error">Description is required</small>
                             </div>
                         </div>
-                        <!-- <div class="col-3">
-                            <div *ngFor="let color of colors; let i = index">
-                                <input type="radio" name="color" [value]="color.id" [(ngModel)]="data.backgroundColor"
-                                    (change)="changeBackgroundColor(color)" id="color.id{{i}}">
-                                <label for="color.id{{i}}">{{ color.name }}</label>
-                            </div>
-                        </div> -->
+
 
 
                         <div class="col-3">
                             <label class="mb-2 ">Choose a Color </label>
 
                             <div *ngFor="let color of colors">
-                                <input type="checkbox" [id]="'color' + color.id" 
-                                       (change)="onColorChange(color)" 
-                                       [checked]="color.selected" 
-                                       class="custom-checkbox" 
-                                       
-                                       [ngClass]="color.selected ? color.class : ''">
+                                <input type="checkbox" [id]="'color' + color.id" (change)="onColorChange(color)"
+                                    [checked]="color.selected" class="custom-checkbox"
+                                    [ngClass]="color.selected ? color.class : ''">
                                 <label for="color{{color.id}}">
-                                  {{ color.name | uppercase }}
+                                    {{ color.name | uppercase }}
                                 </label>
-                              </div>
+                            </div>
 
                         </div>
                     </div>
 
                     <hr>
-                    <div class="row" >
-                        <label class="mb-2">Tags List: </label>
+                    <div class="row">
+                        <label class="mb-2 ml-4">Tags List: </label>
 
                         <div class="col-2">
                             <div class="my-2" style="display: flex;justify-content: start;">
-                                <p-button label="New" icon="pi pi-plus" styleClass="p-button-success"></p-button>
+                                <p-button (click)="openDialog()" label="New" icon="pi pi-plus"
+                                    styleClass="p-button-success"></p-button>
                             </div>
                         </div>
                         <div class="col-10 mt-4" *ngIf="this.id != undefined && data.tags.length > 0">
-                            <span *ngFor="let tag of data.tags">
-                                <span class="pill-success mr-2">{{tag.name}}</span>
+                            <span *ngFor="let tag of data.tags" style="cursor: pointer;" title="Remove">
+                                <span class="pill-success mr-2" (click)="delete(tag)">{{tag.name}}</span>
+
                             </span>
                         </div>
+
+
                     </div>
 
 
@@ -94,6 +89,79 @@
                     </div>
                 </div>
             </form>
+
+            
+            <p-dialog [(visible)]="displayForRemove" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+                [resizable]="false" header="Delete Confirmation">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <p> Are you sure you want to delete the item
+                        <strong>{{selectedTag.name}}</strong>?
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="my-2" style="display: flex;justify-content: end;">
+                        <p-button label="Yes" icon="pi pi-check" styleClass="p-button-danger" (click)="confirmDelete()"
+                            [disabled]="loading"></p-button>
+                        
+                    </div>
+                </div>
+            </p-dialog>
+            <p-dialog [(visible)]="display" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+                [resizable]="false">
+                <div class="card-header">
+                    <h2>Tag Form</h2>
+                </div>
+                <form #tagForm="ngForm">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row mb-2">
+                                    <label for="">Tag Name</label>
+                                    <input type="text" pInputText name="txtName" [(ngModel)]="tag.name"
+                                        #txtName="ngModel" aria-describedby="txtName-help" required
+                                        (input)="filterTags()">
+                                    <small *ngIf="txtName.invalid && (txtName.dirty || txtName.touched)"
+                                        id="txtName-help" class="p-error">Tag Name is required</small>
+                                </div>
+                            </div>
+                            
+                            <label>Suggested Tags</label>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row mb-2">
+                                        <span *ngFor="let tag of displayedTags" class="col-auto">
+                                            <span class="pill-success mr-2 pull-up" style="cursor: pointer"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                (click)="saveTodoTag(tag.id)" title="Add">
+                                                {{tag.name}}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            <div class="card-footer">
+                                <div class="my-2" style="display: flex;justify-content: end; ">
+                                    <p-button *ngIf="this.id != undefined" [loading]="loading" label="Save"
+                                        icon="pi pi-save" styleClass="p-button-success" [disabled]="!tagForm.form.valid"
+                                        (click)="saveTag()"></p-button>
+                                    <p-button *ngIf="this.id == undefined" [loading]="loading" label="Save"
+                                        icon="pi pi-save" styleClass="p-button-success" [disabled]="!tagForm.form.valid"
+                                        (click)="saveTag()"></p-button>
+                                </div>
+                            </div>
+                            <hr>
+
+                        </div>
+                    </div>
+
+                </form>
+            </p-dialog>
+
         </div>
     </div>
 </div>

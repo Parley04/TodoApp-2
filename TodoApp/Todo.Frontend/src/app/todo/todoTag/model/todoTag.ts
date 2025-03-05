@@ -1,9 +1,8 @@
-export class Tag{
+export class TodoTag{
     id:string;
-    name:string;
-    userId:string;
-    countedUses:number;
-
+    todoId:string;
+    tagId:string;
+    
     createdDate:Date;
     updatedDate?:Date;
     deletedDate?:Date;

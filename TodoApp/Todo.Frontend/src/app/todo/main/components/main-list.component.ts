@@ -4,6 +4,7 @@ import { DecodeService } from '../../service/decode.service';
 import { MainService } from '../service/main.service';
 import { TodoList } from '../model/todo-list';
 import { Todo } from '../model/todo';
+import { Tag } from 'primeng/tag';
 
 @Component({
   selector: 'app-main-list',
@@ -21,6 +22,8 @@ export class MainListComponent implements OnInit {
   ) { }
 
   data: TodoList[] = [];
+  tags:Tag[] = [];
+
   loading: boolean = true;
   userId: string = "";
 

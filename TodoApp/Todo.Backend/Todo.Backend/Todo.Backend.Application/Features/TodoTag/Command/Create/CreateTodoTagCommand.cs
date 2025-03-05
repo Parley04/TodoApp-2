@@ -29,19 +29,29 @@ namespace Todo.Backend.Application.Features.TodoTag.Command.Create
             {
                 return Result<string>.Failure("Request is null");
             }
+
             Domain.Entities.Tag? tag = await tagRepository
-                .WhereWithTracking(t => t.Id == request.TagId)
+                .WhereWithTracking(t => t.Id == request.TagId &&t.IsActive)
                 .FirstOrDefaultAsync(cancellationToken);
             if (tag == null)
             {
                 return Result<string>.Failure("Tag not found");
             }
+
+            bool exists = await todoTagRepository
+                .AnyAsync(tt => tt.TodoId == request.TodoId && tt.TagId == request.TagId &&tt.IsActive, cancellationToken);
+            if (exists)
+            {
+                return Result<string>.Failure("This Todo already has the same Tag assigned.");
+            }
+
             tag.CountedUses++;
             mapper.Map(request, tag);
 
             Domain.Entities.TodoTag todoTag = mapper.Map<Domain.Entities.TodoTag>(request);
             await todoTagRepository.AddAsync(todoTag, cancellationToken);
             await unitOfWork.SaveChangesAsync(cancellationToken);
+
             return Result<string>.Succeed(todoTag.Id.ToString());
         }
     }

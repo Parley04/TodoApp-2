@@ -33,7 +33,7 @@ namespace Todo.Backend.Application.Features.Todo.Query.List
                 .ToListAsync(cancellationToken);
 
             var unchosenTags = allTags
-                .Where(tag => !relatedTodoTags.Any(todoTag => todoTag.TagId == tag.Id && todoTag.IsActive))
+                .Where(tag =>tag.IsActive && !relatedTodoTags.Any(todoTag => todoTag.TagId == tag.Id && todoTag.IsActive))
                 .OrderByDescending(tag => tag.CountedUses) 
                 .ToList();
 

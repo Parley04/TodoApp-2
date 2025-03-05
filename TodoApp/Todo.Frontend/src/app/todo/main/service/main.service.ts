@@ -29,6 +29,6 @@ export class MainService {
     return this.httpClient.post<Todo>(this.apiUrl+"Todo/Update", todo);
   }
   delete(todo:Todo):Observable<Todo> {
-    return this.httpClient.post<Todo>(this.apiUrl+"Todo/Delete", todo);
+    return this.httpClient.post<Todo>(this.apiUrl+"Todo/Delete/", todo);
   }
 }

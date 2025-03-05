@@ -28,6 +28,9 @@ public sealed class MappingProfile : Profile
         CreateMap<DeleteTodoTagCommand, Domain.Entities.Tag>()
                   .ForMember(dest => dest.Id, opt => opt.Ignore());
         CreateMap<DeleteTodoTagCommand, Domain.Entities.TodoTag>();
+        CreateMap<DeleteWithItemsCommand, Domain.Entities.Tag>()
+                 .ForMember(dest => dest.Id, opt => opt.Ignore());
+        CreateMap<DeleteWithItemsCommand, Domain.Entities.TodoTag>();
 
     }
 }

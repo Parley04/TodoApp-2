@@ -48,5 +48,12 @@ namespace Todo.Backend.WebAPI.Controllers
             var response = await _mediator.Send(request, cancellationToken);
             return StatusCode(response.StatusCode, response);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteWithItems(Guid todoId,Guid tagId, CancellationToken cancellationToken)
+        {
+            var response = await _mediator.Send(new DeleteWithItemsCommand(todoId, tagId), cancellationToken);
+            return StatusCode(response.StatusCode, response);
+        }
     }
 }

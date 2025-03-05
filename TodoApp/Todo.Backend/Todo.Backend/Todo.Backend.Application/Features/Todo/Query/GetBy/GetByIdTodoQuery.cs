@@ -6,7 +6,7 @@ using TS.Result;
 
 namespace Todo.Backend.Application.Features.Todo.Query.GetBy
 {
-    public sealed record GetByIdTodoQuery(Guid Id): IRequest<Result<TodoDto>>;
+    public sealed record GetByIdTodoQuery(Guid Id) : IRequest<Result<TodoDto>>;
 
     internal sealed record GetByIdTodoQueryHandler(
                 ITodoRepository todoRepository
@@ -32,11 +32,13 @@ namespace Todo.Backend.Application.Features.Todo.Query.GetBy
                 Description = todo.Description,
                 BackgroundColor = todo.BackgroundColor,
                 IsCompleted = todo.IsCompleted,
-                Tags = todo.TodoTags.Select(tt => new TagDto
-                {
-                    Id = tt.Tag!.Id,
-                    Name = tt.Tag.Name
-                }).ToList()
+                Tags = todo.TodoTags
+                    .Where(tt => tt.IsActive) 
+                    .Select(tt => new TagDto
+                    {
+                        Id = tt.Tag!.Id,
+                        Name = tt.Tag.Name
+                    }).ToList()
             };
 
             return Result<TodoDto>.Succeed(todoDto);
