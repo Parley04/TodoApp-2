@@ -11,13 +11,13 @@ import { RippleModule } from 'primeng/ripple';
 import { AppMenuComponent } from './app.menu.component';
 import { AppMenuitemComponent } from './app.menuitem.component';
 import { RouterModule } from '@angular/router';
-import { AppTopBarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
 import { ToastModule } from 'primeng/toast';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { AppTopBarComponent } from './app.topbar.component';
 
 @NgModule({
     declarations: [

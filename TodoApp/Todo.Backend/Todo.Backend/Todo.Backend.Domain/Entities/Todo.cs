@@ -9,7 +9,10 @@ namespace Todo.Backend.Domain.Entities
         public string Description { get; set; }=string.Empty;
         public int BackgroundColor { get; set; }
         public bool IsCompleted { get; set; }
-        public List<Tag>? Tags { get; set; }
+
+
+
+        public List<TodoTag> TodoTags { get; set; } = null!;
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? UpdatedDate { get; set; }

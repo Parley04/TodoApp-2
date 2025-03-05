@@ -12,8 +12,8 @@ using Todo.Backend.Infrastructure.Context;
 namespace Todo.Backend.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250304223156_mg5")]
-    partial class mg5
+    [Migration("20250305120107_mg6")]
+    partial class mg6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,7 +121,7 @@ namespace Todo.Backend.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeletedDate")
@@ -134,9 +134,6 @@ namespace Todo.Backend.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("TodoId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
@@ -145,8 +142,6 @@ namespace Todo.Backend.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TodoId");
 
                     b.ToTable("Tags");
                 });
@@ -207,32 +202,46 @@ namespace Todo.Backend.Infrastructure.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("TagId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("TodoId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("TodoId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("TagId");
+
+                    b.HasIndex("TodoId");
+
                     b.ToTable("TodoTags");
                 });
 
-            modelBuilder.Entity("Todo.Backend.Domain.Entities.Tag", b =>
+            modelBuilder.Entity("Todo.Backend.Domain.Entities.TodoTag", b =>
                 {
-                    b.HasOne("Todo.Backend.Domain.Entities.Todo", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("TodoId");
+                    b.HasOne("Todo.Backend.Domain.Entities.Tag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Todo.Backend.Domain.Entities.Todo", "Todo")
+                        .WithMany("TodoTags")
+                        .HasForeignKey("TodoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tag");
+
+                    b.Navigation("Todo");
                 });
 
             modelBuilder.Entity("Todo.Backend.Domain.Entities.Todo", b =>
                 {
-                    b.Navigation("Tags");
+                    b.Navigation("TodoTags");
                 });
 #pragma warning restore 612, 618
         }

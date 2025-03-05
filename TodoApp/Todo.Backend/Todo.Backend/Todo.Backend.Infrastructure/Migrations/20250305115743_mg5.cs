@@ -11,6 +11,22 @@ namespace Todo.Backend.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterColumn<Guid>(
+                name: "TodoId",
+                table: "TodoTags",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "TagId",
+                table: "TodoTags",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedDate",
                 table: "TodoTags",
@@ -56,12 +72,6 @@ namespace Todo.Backend.Infrastructure.Migrations
                 type: "bit",
                 nullable: false,
                 defaultValue: false);
-
-            migrationBuilder.AddColumn<Guid>(
-                name: "TodoId",
-                table: "Tags",
-                type: "uniqueidentifier",
-                nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "UpdatedDate",
@@ -70,28 +80,50 @@ namespace Todo.Backend.Infrastructure.Migrations
                 nullable: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tags_TodoId",
-                table: "Tags",
+                name: "IX_TodoTags_TagId",
+                table: "TodoTags",
+                column: "TagId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TodoTags_TodoId",
+                table: "TodoTags",
                 column: "TodoId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Tags_Todos_TodoId",
-                table: "Tags",
+                name: "FK_TodoTags_Tags_TagId",
+                table: "TodoTags",
+                column: "TagId",
+                principalTable: "Tags",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_TodoTags_Todos_TodoId",
+                table: "TodoTags",
                 column: "TodoId",
                 principalTable: "Todos",
-                principalColumn: "Id");
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Tags_Todos_TodoId",
-                table: "Tags");
+                name: "FK_TodoTags_Tags_TagId",
+                table: "TodoTags");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_TodoTags_Todos_TodoId",
+                table: "TodoTags");
 
             migrationBuilder.DropIndex(
-                name: "IX_Tags_TodoId",
-                table: "Tags");
+                name: "IX_TodoTags_TagId",
+                table: "TodoTags");
+
+            migrationBuilder.DropIndex(
+                name: "IX_TodoTags_TodoId",
+                table: "TodoTags");
 
             migrationBuilder.DropColumn(
                 name: "CreatedDate",
@@ -122,12 +154,24 @@ namespace Todo.Backend.Infrastructure.Migrations
                 table: "Tags");
 
             migrationBuilder.DropColumn(
+                name: "UpdatedDate",
+                table: "Tags");
+
+            migrationBuilder.AlterColumn<string>(
                 name: "TodoId",
-                table: "Tags");
+                table: "TodoTags",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
 
-            migrationBuilder.DropColumn(
-                name: "UpdatedDate",
-                table: "Tags");
+            migrationBuilder.AlterColumn<string>(
+                name: "TagId",
+                table: "TodoTags",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
         }
     }
 }

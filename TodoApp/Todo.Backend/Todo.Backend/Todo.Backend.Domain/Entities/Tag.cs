@@ -7,9 +7,9 @@ namespace Todo.Backend.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string UserId { get; set; } = string.Empty;
 
-        public DateTime CreatedDate { get; set; }=DateTime.Now;
-        public DateTime? UpdatedDate{ get; set; }
-        public DateTime? DeletedDate{ get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public DateTime? UpdatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
         public bool IsActive { get; set; } = true;
 
     }

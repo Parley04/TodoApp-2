@@ -1,0 +1,48 @@
+<div class="grid p-fluid">
+    <p-toast></p-toast>
+    <div class="col-12 md:col-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    Todo Form
+                </h2>
+            </div>
+            <form #todoForm="ngForm">
+                <div class="card-body">
+                    <div class="row mb-2">
+                        <label for="">Checked</label>
+                        <p-toggleButton [(ngModel)]="data.isCompleted" onLabel="Yes" offLabel="No" icon="pi pi-check"
+                            offIcon="pi pi-times" styleClass="p-button-success"></p-toggleButton>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label for="">Title</label>
+                        <input type="text" pInputText name="txtTitle" [(ngModel)]="data.title" #txtTitle="ngModel"
+                            aria-describedby="txtTitle-help" required>
+                        <small *ngIf="txtTitle.invalid && (txtTitle.dirty || txtTitle.touched)" id="txtTitle-help"
+                            class="p-error">Title is required</small>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="">Description</label>
+                        <input type="text" pInputText name="txtDescription" [(ngModel)]="data.description"
+                            #txtDescription="ngModel" aria-describedby="txtDescription-help" required>
+                        <small *ngIf="txtDescription.invalid && (txtDescription.dirty || txtDescription.touched)"
+                            id="txtDescription-help" class="p-error">Description is required</small>
+                    </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="my-2" style="display: flex;justify-content: end;">
+                            <p-button *ngIf="this.id != undefined" [loading]="loading" label="Save" icon="pi pi-save"
+                                styleClass="p-button-success" [disabled]="!todoForm.form.valid"
+                                (click)="save()"></p-button>
+                            <p-button *ngIf="this.id == undefined" [loading]="loading" label="Save" icon="pi pi-save"
+                                styleClass="p-button-success" [disabled]="!todoForm.form.valid"
+                                (click)="save()"></p-button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    

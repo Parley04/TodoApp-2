@@ -1,0 +1,99 @@
+<div class="grid p-fluid">
+    <p-toast></p-toast>
+    <p-confirmDialog key="confirm1" [style]="{width: '50vw'}"></p-confirmDialog>
+    <div class="col-12 md:col-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    My Todo List
+                </h2>
+            </div>
+            <div class="card-body">
+                <div class="my-2" style="display: flex;justify-content: start;">
+                    <p-button label="New" icon="pi pi-plus" styleClass="p-button-primary" routerLink="form"></p-button>
+                </div>
+                <p-table #dt1 [value]="data" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+                    [rowsPerPageOptions]="[10, 25, 50]" [loading]="loading" [paginator]="true" responsiveLayout="stack"
+                    [globalFilterFields]="['title', 'description']">
+                    <ng-template pTemplate="caption">
+                        <div class="flex">
+                            <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
+                                (click)="clear(dt1)"></button>
+                            <span class="p-input-icon-left ml-auto">
+                                <i class="pi pi-search"></i>
+                                <input pInputText type="text" (input)="dt1.filterGlobal($event.target, 'contains')"
+                                    placeholder="Search..." />
+                            </span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="status" style="min-width:5rem">
+                                <div class="flex align-items-center">
+                                    Status
+                                </div>
+                            </th>
+                            <th pSortableColumn="title" style="min-width:5rem">
+                                <p-sortIcon field="title"></p-sortIcon>
+                                <div class="flex align-items-center">
+                                    Title
+                                    <p-columnFilter type="text" field="title" display="menu"></p-columnFilter>
+                                </div>
+                            </th>
+                            <th pSortableColumn="description" style="min-width:10rem">
+                                <p-sortIcon field="description"></p-sortIcon>
+                                <div class="flex align-items-center">
+                                    Description
+                                    <p-columnFilter type="text" field="description" display="menu"></p-columnFilter>
+                                </div>
+                            </th>
+                            <th pSortableColumn="tags" style="min-width:10rem">
+                                <p-sortIcon field="tags"></p-sortIcon>
+                                <div class="flex align-items-center">
+                                    Tags
+                                    <p-columnFilter type="text" field="tags" display="menu"></p-columnFilter>
+                                </div>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-data>
+                        <tr [ngStyle]="{'background-color': getBackgroundColor(data.backgroundColor)}">
+                            <td>
+                                <div class="flex items-center">
+                                    <input type="checkbox" [checked]="data.isCompleted" (click)="saveCheckbox(data)">
+                                </div>
+                            </td>
+                            <td>
+                                {{ data.description.length > 25 ? (data.description | slice:0:25) + '...' : data.description }}
+                            </td>
+                            
+                            <td>
+                                {{ data.description.length > 15 ? (data.description | slice:0:15) + '...' : data.description }}
+                            </td>
+                            
+                            <td >
+                                <span *ngFor="let tag of data.tags; let i = index">
+                                    <span *ngIf="i < 1" class="mr-1 pill-secondary">{{tag.name}}</span> 
+                                </span>
+                                <span *ngIf="data.tags.length > 1" class="mr-1 pill-secondary">
+                                    +{{data.tags.length - 1}} more
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <div class="flex">
+                                    <button pButton pRipple icon="pi pi-pencil"
+                                        class="p-button-rounded p-button-warning mr-2"
+                                        routerLink="form/{{data.id}}"></button>
+                                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"
+                                        (click)="delete(data)"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</div>

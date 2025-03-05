@@ -2539,13 +2539,6 @@
           "isCompleted": {
             "type": "boolean"
           },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
           "isActive": {
             "type": "boolean"
           }
@@ -2723,11 +2716,11 @@
           },
           "todoId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "tagId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "updatedDate": {
             "type": "string",

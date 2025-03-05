@@ -8,8 +8,8 @@ namespace Todo.Backend.Application.Features.TodoTag.Command.Update
 {
     public sealed record UpdateTodoTagCommand
         (Guid Id,
-        string TodoId,
-        string TagId,
+        Guid TodoId,
+        Guid TagId,
         DateTime UpdatedDate
         ) : IRequest<Result<string>>;
 

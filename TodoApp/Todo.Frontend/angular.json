@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Todo.Frontend": {
+    "todo.frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Todo.Frontend:build:production"
+              "buildTarget": "todo.frontend:build:production"
             },
             "development": {
-              "buildTarget": "Todo.Frontend:build:development"
+              "buildTarget": "todo.frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,19 +84,22 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
+         
+          "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/upload.php",
+              "src/assets"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

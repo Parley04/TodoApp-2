@@ -1,29 +1,46 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Todo.Backend.Domain.Dtos;
 using Todo.Backend.Domain.Repositor;
 using TS.Result;
 
 namespace Todo.Backend.Application.Features.Todo.Query.List
 {
-    public sealed record ListTodoQuery(string UserId): IRequest<Result<List<Domain.Entities.Todo>>>;
+    public sealed record ListTodoQuery(string UserId): IRequest<Result<List<TodoDto>>>;
 
     public sealed record ListTodoQueryHandler(
             ITodoRepository todoRepository
-        ) : IRequestHandler<ListTodoQuery, Result<List<Domain.Entities.Todo>>>
+        ) : IRequestHandler<ListTodoQuery, Result<List<TodoDto>>>
     {
-        public async Task<Result<List<Domain.Entities.Todo>>> Handle(ListTodoQuery request, CancellationToken cancellationToken)
+        public async Task<Result<List<TodoDto>>> Handle(ListTodoQuery request, CancellationToken cancellationToken)
         {
-            List<Domain.Entities.Todo> todo = await todoRepository.GetAll()
-                .Include(x => x.Tags)
+            var todos = await todoRepository
+                .Where(x => x.UserId == request.UserId && x.IsActive)
                 .OrderBy(x => x.CreatedDate)
-                .Where(x => x.UserId == request.UserId && x.IsActive == true)
+                .Include(x => x.TodoTags)
+                    .ThenInclude(tt => tt.Tag)
                 .ToListAsync(cancellationToken);
 
-            if (todo == null)
+            if (todos == null || !todos.Any())
             {
-                return Result<List<Domain.Entities.Todo>>.Failure("Todo not found.");
+                return Result<List<TodoDto>>.Failure("Todo not found.");
             }
-            return todo;
+
+            var todoDtos = todos.Select(todo => new TodoDto
+            {
+                Id = todo.Id,
+                Title = todo.Title,
+                Description =todo.Description,
+                BackgroundColor=todo.BackgroundColor,
+                IsCompleted=todo.IsCompleted,
+                Tags = todo.TodoTags.Select(tt => new TagDto
+                {
+                    Id = tt.Tag!.Id,
+                    Name = tt.Tag.Name
+                }).ToList()
+            }).ToList();
+
+            return Result<List<TodoDto>>.Succeed(todoDtos);
         }
     }
 
