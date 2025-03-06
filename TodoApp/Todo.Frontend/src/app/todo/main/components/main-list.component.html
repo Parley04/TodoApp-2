@@ -12,21 +12,22 @@
                 <div class="my-2" style="display: flex;justify-content: start;">
                     <p-button label="New" icon="pi pi-plus" styleClass="p-button-primary" routerLink="form"></p-button>
                 </div>
-                <p-table #dt1 [value]="data" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
-                    [rowsPerPageOptions]="[10, 25, 50]" [loading]="loading" [paginator]="true" responsiveLayout="stack"
+                <p-table #dt1 [value]="data | mainPipe:filterText" dataKey="id" [rows]="10"
+                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" [loading]="loading"
+                    [paginator]="true" responsiveLayout="stack"
                     [globalFilterFields]="['title', 'description','tags.name']">
                     <ng-template pTemplate="caption">
                         <div class="flex">
                             <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
                                 (click)="clear(dt1)"></button>
                             <span class="p-input-icon-left ml-auto">
-                                <p-multiselect [options]="tags" [(ngModel)]="selectedTags" optionLabel="name"
+                                <!-- <p-multiselect [options]="tags" [(ngModel)]="selectedTags" optionLabel="name"
                                     placeholder="Select Tags" [maxSelectedLabels]="3" styleClass="w-full md:w-80">
-                                </p-multiselect>
+                                </p-multiselect> -->
 
                                 <i class="pi pi-search"></i>
-                                <input pInputText type="text" (input)="filterGlobal($event)" placeholder="Search..." />
-
+                                <input pInputText type="text" [(ngModel)]="filterText"
+                                    [ngModelOptions]="{standalone:true}" placeholder="Search...">
                             </span>
                         </div>
                     </ng-template>

@@ -20,7 +20,6 @@ export class MainListComponent implements OnInit {
     private messageService: MessageService,
     private confirmationService: ConfirmationService,
     private decodeService: DecodeService,
-
   ) { }
 
   data: TodoList[] = [];
@@ -30,39 +29,14 @@ export class MainListComponent implements OnInit {
   userId: string = "";
 
   filteredData: any[] = [];
-  selectedTags: any[] = [];
-  uniqueTags: any[] = [];
+  filterText: string = "";
 
   ngOnInit(): void {
-
     const userIdFromService = this.decodeService.getUserId();
     this.userId = userIdFromService ? userIdFromService.toString() : '';
     this.getList();
-    this.filteredData = [...this.data];
   }
-  filterGlobal(event: Event) {
-    const input = event.target as HTMLInputElement;
-    console.log(input.value);
-    if (!input || !input.value) {
-      this.filteredData = [...this.data]; // Arama kutusu boşsa tüm veriyi göster
-      return;
-    }
-
-    const searchText = input.value.toLowerCase();
-
-    this.filteredData = this.data.filter(item => {
-      return Object.values(item).some(value => {
-        if (typeof value === 'string') {
-          return value.toLowerCase().includes(searchText);
-        }
-        if (Array.isArray(value)) {
-          return value.some(tag => tag.name.toLowerCase().includes(searchText));
-        }
-        return false;
-      });
-    });
-  }
-
+  
   getList() {
     this.mainService.getList(this.userId).subscribe((res: any) => {
       this.data = res.data;
@@ -135,5 +109,6 @@ export class MainListComponent implements OnInit {
 
   clear(table: any) {
     table.clear();
+    this.filterText = "";
   }
 }

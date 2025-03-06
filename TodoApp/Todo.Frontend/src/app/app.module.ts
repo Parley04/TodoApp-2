@@ -13,6 +13,7 @@ import { RoleGuard } from './todo/login/guard/role.guard';
 import { LoginModule } from './todo/login/login.module';
 import { DecodeService } from './todo/service/decode.service';
 import { TodoModule } from './todo/todo.module';
+import { RegisterModule } from './todo/register/register.module';
 
 
 
@@ -25,6 +26,7 @@ import { TodoModule } from './todo/todo.module';
     AppRoutingModule,
     AppLayoutModule,
     LoginModule,
+    RegisterModule,
     TodoModule,
     JwtModule.forRoot({
       config: {

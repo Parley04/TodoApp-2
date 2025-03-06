@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Todo.Backend.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+193190646faee71c9bbff55ba1e49de6b9d4a057")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5b14b4e5a8b2aa4fa7d37a5529bc4fb00f95656")]
 [assembly: System.Reflection.AssemblyProductAttribute("Todo.Backend.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Todo.Backend.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

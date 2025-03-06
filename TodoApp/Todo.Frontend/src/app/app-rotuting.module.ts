@@ -58,6 +58,10 @@ import { AppLayoutComponent } from './todo/layout/app.layout.component';
                 loadChildren: () => import('./todo/login/login.module').then(m => m.LoginModule)
             },
             {
+                path: 'register',
+                loadChildren: () => import('./todo/register/register.module').then(m => m.RegisterModule)
+            },
+            {
                 path: '**',
                 redirectTo: 'home',
             }

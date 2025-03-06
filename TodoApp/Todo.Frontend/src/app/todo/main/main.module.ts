@@ -15,6 +15,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MessagesModule } from 'primeng/messages';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
+import { MainPipe } from './pipe/main.pipe';
 
 const routes = [
   {
@@ -34,7 +35,8 @@ const routes = [
 @NgModule({
   declarations: [
     MainFormComponent,
-    MainListComponent
+    MainListComponent,
+    MainPipe,
   ],
   imports: [
     CommonModule,

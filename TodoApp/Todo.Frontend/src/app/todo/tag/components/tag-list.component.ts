@@ -32,6 +32,7 @@ export class TagListComponent implements OnInit {
   getList() {
     this.loading = true;
     this.tagService.getList(this.userId).subscribe((res: any) => {
+      this.messageService.add({ severity: 'success', summary: 'Success', detail: res.data.length + " Records Listed" });
       this.data = res.data;
       this.loading = false;
     }, (error) => {
