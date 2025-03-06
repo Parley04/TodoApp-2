@@ -23,19 +23,19 @@ export class ErrorInterceptor implements HttpInterceptor {
         return next.handle(request).pipe(catchError((error) => {
             switch (error.status) {
                 case 0:
-                    this.messsageService.add({ severity: 'error', summary: 'Hata', detail: 'Sunucu Bağlantısı Yok' });
+                    this.messsageService.add({ severity: 'error', summary: 'Error', detail: 'Sunucu Bağlantısı Yok' });
                     break;
                 case HttpStatusCode.Unauthorized:
-                    this.messsageService.add({ severity: 'error', summary: 'Hata', detail: 'Yetkisiz İşlem' });
+                    this.messsageService.add({ severity: 'error', summary: 'Error', detail: 'Yetkisiz İşlem' });
                     break;
                 case HttpStatusCode.InternalServerError:
-                    this.messsageService.add({ severity: 'error', summary: 'Hata', detail: error.error.Message });
+                    this.messsageService.add({ severity: 'error', summary: 'Error', detail: error.error.Message });
                     break;
                 case HttpStatusCode.BadRequest:
-                    this.messsageService.add({ severity: 'error', summary: 'Hata', detail: error.error });
+                    this.messsageService.add({ severity: 'error', summary: 'Error', detail: error.error });
                     break;
                 default:
-                    this.messsageService.add({ severity: 'error', summary: 'Hata', detail: 'Beklenmeyen Hata' });
+                    this.messsageService.add({ severity: 'error', summary: 'Error', detail: 'Beklenmeyen Error' });
                     break;
             }
             return throwError(error);

@@ -37,13 +37,13 @@ export class AuthService {
         this.adminToken = res.data;
         console.log(this.adminToken);
         localStorage.setItem("todoToken", this.adminToken.token);
-        this.messageService.add({ severity: 'info', summary: 'Bilgi', detail: "Giriş İşlemi Başarılı" });
+        this.messageService.add({ severity: 'info', summary: 'Bilgi', detail: "Giriş İşlemi Success" });
         setTimeout(() => {
           this.router.navigate(["/home"]);
         }, 1500);
         resolve(true);
       }, (err) => {
-        this.messageService.add({ severity: 'error', summary: 'Hata', detail: err.error })
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: err.error })
         resolve(false);
       });
     });
@@ -54,7 +54,7 @@ export class AuthService {
     setTimeout(() => {
       this.router.navigate(["/login"]);
     }, 750);
-    this.messageService.add({ severity: 'info', summary: 'Bilgi', detail: "Çıkış İşlemi Başarılı" });
+    this.messageService.add({ severity: 'info', summary: 'Bilgi', detail: "Çıkış İşlemi Success" });
   }
 
   // hasRequiredRoles(requiredRoles: Array<string> | string): boolean {

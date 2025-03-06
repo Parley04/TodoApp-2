@@ -35,7 +35,7 @@ export class TagService {
   }
 
   delete(tag: Tag): Observable<Tag> {
-    return this.httpClient.post<Tag>(this.apiUrl + "Tag/Delete", tag);
+    return this.httpClient.post<Tag>(this.apiUrl + "Tag/Delete/", tag);
   }
 
 

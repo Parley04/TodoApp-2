@@ -93,24 +93,24 @@ export class MainFormComponent implements OnInit {
     if (this.id == undefined) {
       this.data.createdDate = new Date();
       this.mainService.add(this.data).subscribe((res: any) => {
-        this.messageService.add({ severity: 'success', summary: 'Başarılı', detail: res.message });
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: res.message });
         setTimeout(() => {
           this.router.navigate(['/todo']);
         }, 700);
       }, (err: any) => {
-        this.messageService.add({ severity: 'error', summary: 'Hata', detail: err.error.message });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: err.error.message });
         this.loading = false;
       });
     }
     else {
       this.data.updatedDate = new Date();
       this.mainService.update(this.data).subscribe((res: any) => {
-        this.messageService.add({ severity: 'success', summary: 'Başarılı', detail: res.message });
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: res.message });
         setTimeout(() => {
           this.router.navigate(['/todo']);
         }, 700);
       }, (err: any) => {
-        this.messageService.add({ severity: 'error', summary: 'Hata', detail: err.error.message });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: err.error.message });
         this.loading = false;
       });
     }
@@ -121,11 +121,11 @@ export class MainFormComponent implements OnInit {
     this.tag.userId = this.userId;
     this.tag.countedUses = 0;
     this.tagService.add(this.tag).subscribe((res: any) => {
-      this.messageService.add({ severity: 'success', summary: 'Başarılı', detail: res.message });
+      this.messageService.add({ severity: 'success', summary: 'Success', detail: res.message });
       this.display = false;
       this.saveTodoTag(res.data);
     }, (err: any) => {
-      this.messageService.add({ severity: 'error', summary: 'Hata', detail: err.error.errorMessages });
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: err.error.errorMessages });
     });
   }
 
@@ -141,7 +141,7 @@ export class MainFormComponent implements OnInit {
       this.getUnchosenTags();
       this.display = false;
     }, (err: any) => {
-      this.messageService.add({ severity: 'error', summary: 'Hata', detail: err.error.errorMessages });
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: err.error.errorMessages });
     });
   }
 
@@ -150,15 +150,13 @@ export class MainFormComponent implements OnInit {
       this.data = res.data;
       this.selectedColor = res.data.backgroundColor;
       this.updateColorSelection();
-    }
-    );
+    });
   }
 
   getUnchosenTags() {
     this.tagService.getListOfUnchosenTags(this.userId, this.data.id).subscribe((res: any) => {
       this.unchosenTags = res.data;
       this.displayedTags = [...this.unchosenTags];
-
     });
   }
 

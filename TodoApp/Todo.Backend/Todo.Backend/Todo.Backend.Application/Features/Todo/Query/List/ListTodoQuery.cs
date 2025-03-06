@@ -6,7 +6,7 @@ using TS.Result;
 
 namespace Todo.Backend.Application.Features.Todo.Query.List
 {
-    public sealed record ListTodoQuery(string UserId): IRequest<Result<List<TodoDto>>>;
+    public sealed record ListTodoQuery(string UserId) : IRequest<Result<List<TodoDto>>>;
 
     public sealed record ListTodoQueryHandler(
             ITodoRepository todoRepository
@@ -30,10 +30,12 @@ namespace Todo.Backend.Application.Features.Todo.Query.List
             {
                 Id = todo.Id,
                 Title = todo.Title,
-                Description =todo.Description,
-                BackgroundColor=todo.BackgroundColor,
-                IsCompleted=todo.IsCompleted,
-                Tags = todo.TodoTags.Select(tt => new TagDto
+                Description = todo.Description,
+                BackgroundColor = todo.BackgroundColor,
+                IsCompleted = todo.IsCompleted,
+                Tags = todo.TodoTags
+                 .Where(tt => tt.IsActive)
+                .Select(tt => new TagDto
                 {
                     Id = tt.Tag!.Id,
                     Name = tt.Tag.Name,

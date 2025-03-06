@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Todo.Backend.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+293adc91d4ab77b7ef3d5610bda86f488a5856c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+193190646faee71c9bbff55ba1e49de6b9d4a057")]
 [assembly: System.Reflection.AssemblyProductAttribute("Todo.Backend.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Todo.Backend.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

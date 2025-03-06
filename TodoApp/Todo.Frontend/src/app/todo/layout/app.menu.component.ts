@@ -10,7 +10,6 @@ import { DecodeService } from '../service/decode.service';
 export class AppMenuComponent implements OnInit {
 
     model: any[] = [];
-
     typeId: number = 0;
 
     constructor(public layoutService: LayoutService, private decodeService: DecodeService) { }
@@ -21,8 +20,8 @@ export class AppMenuComponent implements OnInit {
             items: [
                 { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: ['/home'] },
                 { label: 'Todos', icon: 'pi pi-fw pi-check-square', routerLink: ['/todo'] },
+                { label: 'Tags', icon: 'pi pi-fw pi-tags', routerLink: ['/tag'] },
             ]
         }];
-      
     }
 }

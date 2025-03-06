@@ -15,7 +15,7 @@ namespace Todo.Backend.Application.Features.Tag.Query.List
         public async Task<Result<List<Domain.Entities.Tag>>> Handle(ListTagQuery request, CancellationToken cancellationToken)
         {
             List<Domain.Entities.Tag> tag = await tagRepository.GetAll()
-                .OrderBy(x => x.CreatedDate)
+                .OrderByDescending(x => x.CountedUses)
                 .Where(x => x.UserId == request.UserId && x.IsActive==true)
                 .ToListAsync(cancellationToken);
 
